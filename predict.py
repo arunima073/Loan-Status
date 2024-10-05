@@ -11,6 +11,10 @@ def hello_word():
 model_pickle=open("./artefacts/classifier.pkl","rb")
 clf=pickle.load(model_pickle)
 
+@app.route("/ping",methods=['GET'])
+def pinger():
+  return {"MESSAGE":"Hi,I am Pinging....!!!!!"}
+
 @app.route("/predict",methods=['POST'])
 def predict():
   loan_req=request.get_json()
