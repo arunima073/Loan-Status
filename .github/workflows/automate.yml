@@ -17,4 +17,4 @@ jobs:
       - name: Installing Dependancies
         run: pip install -r requirements.txt
       - name: Running Testcases
-        run: pytest test_predict.py
+        run: pytest test_cases.py
